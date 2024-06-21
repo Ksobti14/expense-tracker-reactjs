@@ -1,23 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
+import Exptrack from './pages/signup/expense-tracker/Exptrack.js';
+import Sign from './pages/signup/Sign.js';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path='/' exact element={<Sign/>}/>
+          <Route path='/expense-tracker' exact element={<Exptrack/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }

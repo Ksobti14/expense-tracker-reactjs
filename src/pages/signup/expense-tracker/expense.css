@@ -159,3 +159,28 @@ body {
     font-size: 0.8em;
     color: #999;
 }
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+        
+    }
+
+    .income-expense-section {
+        flex-direction: column;
+    }
+
+    .income, .expense {
+        flex: 1 100%;
+    }
+
+    .profile-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .signout-button {
+        margin-top: 10px;
+        align-self: center;
+    }
+}

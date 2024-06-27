@@ -3,6 +3,7 @@ import { auth,provider } from '../../config/firebase.js';
 import {signInWithPopup} from 'firebase/auth';
 import { useNavigate ,Navigate} from 'react-router-dom';
 import { UseGetinfo } from '../../hooks/UseGetinfo.js';
+import './sign.css'
 export default function Sign() {
     const navigate=useNavigate();
     const {isauth}=UseGetinfo
